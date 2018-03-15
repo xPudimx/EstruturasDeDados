@@ -44,14 +44,14 @@ class Rectangle {
 	}
 	
 	boolean pointInside(Point p) {
-		if ( p.x > p1.x && p.x < p2.x && p.y > p1.y && p.y < p2.y){
+		if ( p.x >= p1.x && p.x <= p2.x && p.y >= p1.y && p.y <= p2.y){
 			return true;
 		}
 		else return false;
 	}
 	
 	boolean rectangleInside(Rectangle r) {
-		if (r.p1.x > p1.x && r.p2.x < p2.x && r.p1.y > p1.y && r.p2.y < p2.y) {
+		if (r.p1.x >= p1.x && r.p2.x <= p2.x && r.p1.y >= p1.y && r.p2.y <= p2.y) {
 			return true;
 		}
 		else return false ;
@@ -59,7 +59,7 @@ class Rectangle {
 		
 		
 }
-	
+
 public class TestGeometry {
    public static void main (String[] args){
       Point p1 = new Point();
