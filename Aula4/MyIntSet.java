@@ -2,8 +2,8 @@ public class MyIntSet implements IntSet {
    private int size;   // Numero de elementos do conjunto
    private int elem[]; // Array que contem os elementos em si 
    
-   MyIntSet() {
-      elem = new int[100]; // tamanho max definido no ex
+   MyIntSet(int maxSize) {
+      elem = new int[maxSize];
       size = 0;
    }
 
@@ -54,4 +54,16 @@ public class MyIntSet implements IntSet {
       res += "}";
       return res;
    }
+   MyIntSet union (MyIntSet s){
+      MyIntSet uset = new MyIntSet(100);
+      for (int i = 0; i < this.size; i++ ) {
+         uset.add(this.elem[i]);         
+      }
+      for (int i = 0 ;i < s.size;i++ ) {
+         uset.add(s.elem[i]);         
+      }
+      return uset;
+
+   }
+
 }

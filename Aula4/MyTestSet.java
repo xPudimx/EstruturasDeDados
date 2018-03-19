@@ -1,24 +1,16 @@
 public class MyTestSet {
    public static void main(String[] args) {
-      IntSet s = new MyIntSet(); // Chama o construtor padrão
+                MyIntSet s1 = new MyIntSet(3);
+                s1.add(1);
+                s1.add(5);
+                s1.add(7);
+                
+                MyIntSet s2 = new MyIntSet(3);
+                s2.add(2);
+                s2.add(5);
+                s2.add(8);
 
-      s.clear();
-      System.out.println(s.size());      // Escreve "0"
-      
-      System.out.println(s.add(1));      // Escreve "true"
-      System.out.println(s.add(5));      // Escreve "true"
-      System.out.println(s.add(7));      // Escreve "true"
-      System.out.println(s.add(1));      // Escreve "false"
-      System.out.println(s.size());      // Escreve "3
-
-      System.out.println(s.remove(5));   // Escreve "true"
-      System.out.println(s.remove(5));   // Escreve "false"
-      System.out.println(s.size());      // Escreve "2"
-
-      System.out.println(s.contains(1)); // Escreve "true"
-      System.out.println(s.contains(2)); // Escreve "false"
-
-      s.clear();
-      System.out.println(s.size());      // Escreve "0"
+                MyIntSet s3 = s1.union(s2);
+                System.out.println(s1+" union with "+s2+" = "+s3+" [size="+s3.size()+"]");
    }
 }
