@@ -1,3 +1,13 @@
+// -----------------------------------------------------------
+// Estruturas de Dados 2017/2018 (CC1007) - DCC/FCUP
+// http://www.dcc.fc.up.pt/~pribeiro/aulas/edados1718/
+// -----------------------------------------------------------
+// Lista duplamente ligada
+// (implementada com sentinelas - nós "dummy" no início e no fim
+//  que facilitam a implementação e evitam casos excepcionais)
+// Última alteração: 03/04/2018
+// -----------------------------------------------------------
+
 public class DoublyLinkedList<T> {
    private DNode<T> first; // Primeiro nó da lista
    private DNode<T> last;  // Último nó da lista
@@ -20,7 +30,7 @@ public class DoublyLinkedList<T> {
    public boolean isEmpty() {
       return (size == 0);
    }
-
+   
    // Retorna o primeiro valor da lista (ou null se a lista for vazia)
    public T getFirst() {
       if (isEmpty()) return null;
@@ -32,7 +42,7 @@ public class DoublyLinkedList<T> {
       if (isEmpty()) return null;
       return last.getPrev().getValue();
    }
-
+   
    // Adiciona v ao início da lista
    public void addFirst(T v) {
       addBetween(v, first, first.getNext());
@@ -58,7 +68,7 @@ public class DoublyLinkedList<T> {
 
    // Remove o último elemento da lista (se for vazia não faz nada)
    void removeLast() {
-      remove(last.getPrev());
+      remove(last.getPrev());            
    }
 
    // Remove um nó da lista
@@ -69,16 +79,16 @@ public class DoublyLinkedList<T> {
       next.setPrev(prev);
       size--;
    }
-
+         
    // Converte a lista para uma String
    public String toString() {
-      String str = "{";
+      String str = "{";      
       DNode<T> cur = first.getNext();
       for (int i=0; i<size; i++) {
          str += cur.getValue();
          cur = cur.getNext();
          if (cur != last) str += ",";
-      }
+      }      
       str += "}";
       return str;
    }
