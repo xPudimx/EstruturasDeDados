@@ -1,11 +1,3 @@
-// -----------------------------------------------------------
-// Estruturas de Dados 2017/2018 (CC1007) - DCC/FCUP
-// http://www.dcc.fc.up.pt/~pribeiro/aulas/edados1718/
-// -----------------------------------------------------------
-// Árvore binária "normal"
-// Última alteração: 26/04/2018
-// -----------------------------------------------------------
-
 public class BTree<T> {   
    private BTNode<T> root; // raíz da árvore
 
@@ -25,7 +17,7 @@ public class BTree<T> {
 
    // --------------------------------------------------------
 
-   // Número de nós da árvore   
+   // Número de nós da árvore
    public int numberNodes() {
       return numberNodes(root);
    }
@@ -48,7 +40,7 @@ public class BTree<T> {
    }
 
    // --------------------------------------------------------
-   
+
    // O elemento value está contido na árvore?
    public boolean contains(T value) {
       return contains(root, value);
@@ -77,7 +69,7 @@ public class BTree<T> {
    }
 
    // --------------------------------------------------------
-   
+
    // Imprimir árvore em InOrder
    public void printInOrder() {
       System.out.print("InOrder:");
@@ -113,7 +105,7 @@ public class BTree<T> {
    // Imprimir árvore numa visita em largura (usando TAD Fila)
    public void printBFS() {
       System.out.print("BFS:");
-      
+
       MyQueue<BTNode<T>> q = new LinkedListQueue<BTNode<T>>();
       q.enqueue(root);
       while (!q.isEmpty()) {
@@ -128,11 +120,11 @@ public class BTree<T> {
    }
 
    // --------------------------------------------------------
-   
+
    // Imprimir árvore numa visita em profundidade (usando TAD Pilha)
    public void printDFS() {
       System.out.print("DFS:");
-      
+
       MyStack<BTNode<T>> q = new LinkedListStack<BTNode<T>>();
       q.push(root);
       while (!q.isEmpty()) {

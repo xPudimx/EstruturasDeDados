@@ -1,11 +1,3 @@
-// -----------------------------------------------------------
-// Estruturas de Dados 2017/2018 (CC1007) - DCC/FCUP
-// http://www.dcc.fc.up.pt/~pribeiro/aulas/edados1718/
-// -----------------------------------------------------------
-// Exemplo de utilização da uma árvore binária
-// Última alteração: 26/04/2018
-// -----------------------------------------------------------
-
 import java.util.Scanner;
 
 public class TestBTree {
@@ -21,7 +13,7 @@ public class TestBTree {
       System.out.println("contains(3) = " + t.contains(3));
 
       // Escrever nós da árvore seguindo várias ordens possíveis
-      t.printPreOrder();      
+      t.printPreOrder();
       t.printInOrder();
       t.printPostOrder();
       t.printBFS();
