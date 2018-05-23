@@ -1,4 +1,4 @@
-public class BSTree<T extends Comparable<? super T>> {   
+public class BSTree<T extends Comparable<? super T>> {
    private BSTNode<T> root; // raíz da árvore
 
    // Construtor
@@ -18,6 +18,14 @@ public class BSTree<T extends Comparable<? super T>> {
    // Limpa a árvore (torna-a vazia)
    public void clear() {
       root = null;
+   }
+
+   public T minValue(){
+     BSTNode cur = root;
+     while(cur.getLeft() != null){
+       cur.getLeft();
+     }
+     return cur.getValue();
    }
 
    // --------------------------------------------------------

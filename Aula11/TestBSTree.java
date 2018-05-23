@@ -21,6 +21,7 @@ class TestBSTree {
       System.out.println("depth = " + t.depth());
       System.out.println("contains(2) = " + t.contains(2));
       System.out.println("contains(3) = " + t.contains(3));
+      System.out.println("Min = " + t.minValue());
 
       // Escrever nós da árvore seguindo várias ordens possíveis
       t.printPreOrder();
