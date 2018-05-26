@@ -18,5 +18,14 @@ class TestBSTree {
 
       // Escrever resultado de chamada a alguns métodos
       System.out.println("numberLeafs = " + t.numberLeafs());
+      t.printPreOrder();
+      t.printInOrder();
+      t.printPostOrder();
+
+      // Experimentando remoção
+      t.remove(14);
+      t.printPreOrder();
+      t.printInOrder();
+      t.printPostOrder();
    }
 }
